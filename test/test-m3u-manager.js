@@ -1,4 +1,4 @@
-var manager = require('.index')('./test/m3u');
+var manager = require('../index')('./test/m3u');
 var fs = require('fs');
 var assert = require('assert');
 
