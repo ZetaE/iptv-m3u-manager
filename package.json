@@ -1,0 +1,36 @@
+{
+  "name": "iptv-m3u-manager",
+  "version": "1.0.0",
+  "description": "a simple iptv playlist files manager.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZetaE/iptv-m3u-manager.git"
+  },
+  "keywords": [
+    "iptv",
+    "m3u"
+  ],
+  "author": "cesare moschini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZetaE/iptv-m3u-manager/issues"
+  },
+  "homepage": "https://github.com/ZetaE/iptv-m3u-manager#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "debug": "^2.2.0",
+    "json-fs-store": "^1.0.0",
+    "node-uuid": "^1.4.7",
+    "playlist-parser": "0.0.12"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
