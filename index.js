@@ -50,26 +50,6 @@ var M3uManager = function(m3uPath){
 			return cb(null,channels);
 			
 		});
-		
-		/*
-		var playlist = M3Uparser.parse(fs.readFileSync(path, { encoding: "utf8" }));
-		var channels = [];
-		var channel = null;
-	
-		playlist.forEach(function(ch){
-			var rawtitle = ch.title;
-			//delete the -1 from title
-			if(rawtitle.indexOf("-1") == 0){
-				rawtitle = rawtitle.slice(3);
-				}
-			channel = ch;
-			channel.title = rawtitle;
-			channel.favorite = false;
-			channels.push(channel);
-		});
-	
-		return channels;
-		*/
 	};
 	
 	var asyncRemovePlaylist = function(playlist,removeFromDisk){
@@ -191,8 +171,7 @@ var M3uManager = function(m3uPath){
 		getAllPlaylist : function(cb){
 		
 			store.list(function(err, objects) {
-  		  	  // err if there was trouble reading the file system
-		
+ 
   		  	  	if (err) return cb(err);
 		  
 		  		return cb(null,objects);
