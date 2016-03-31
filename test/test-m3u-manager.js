@@ -11,10 +11,7 @@ describe('m3u-manager test', function(){
 			if(err) throw err;
 			
 			done();
-				
-				
-		});
-		
+		});		
 	});
 	
 	it('getAllPlaylist should return empty array of objects', function(done){
@@ -24,7 +21,7 @@ describe('m3u-manager test', function(){
 			if (err) throw err;
 			if (objects.length === 0) done();
 			else 
-				done();//throw new Error('the number of playlist files is not equal to 0');
+				done();
 		});
 	 }); 
 	 
@@ -38,22 +35,17 @@ describe('m3u-manager test', function(){
 		 for(i=0;i<3;i++)
 		 {
 			 var localpath = test_p_files_folder + '/' + pfiles[i] + ext;
-			 //console.log('before loading');
+			 
 			 manager.loadPlaylistFromDisk(localpath,function(err){
-				 //console.log(pfiles[i] + ' loaded');
+				 
 				 if(err) throw err;
 				 
 				 playlist_counter++;
 				 if(playlist_counter === pfiles.length) done();
-				 
 			 });
 		 }
-		 
-		 
-			
 	 });
 	 
-	 //test getplaylist by name function
 	 it('get playlistByName function should return the correct playlist',function(done){
 	 	
 		 var playlist_name = 'playlist n 2';
@@ -69,7 +61,6 @@ describe('m3u-manager test', function(){
 		
 	 });
 	 
-	 //remove playlist by name
 	 it('remove and delete playlist n 2 file',function(done){
 		 
 		 var playlistname = 'playlist n 2';
@@ -82,10 +73,6 @@ describe('m3u-manager test', function(){
 				 done();
 			 else
 				 throw new Error('unexpected deleted item. deleted item: ' + deleteditem.playlist);
-			
 		 });
-		 
 	 });
-	 
-	 
 });
