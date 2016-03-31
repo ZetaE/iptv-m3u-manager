@@ -6,6 +6,7 @@ var debug = require('debug')('iptvplayer:m3u-manager');
 var uuid = require('node-uuid');
 var Path = require('path');
 var http = require('http');
+var mkdirp = require('mkdirp');
 
 const M3U_PATH = './m3u';
 
@@ -13,6 +14,11 @@ var M3uManager = function(m3uPath){
 	
 	const m3upath = m3uPath || M3U_PATH;
 	const PLAYLIST_FOLDER_PATH = m3upath + '/' + 'files/';
+
+	mkdirp(PLAYLIST_FOLDER_PATH, function (err,made) {
+	    if (err) throw err;
+		console.log(made);
+	});
 	
 	var store = Store(m3upath);
 	

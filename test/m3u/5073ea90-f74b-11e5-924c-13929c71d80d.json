@@ -1,7 +1,7 @@
 {
-  "id": "2d51a4b0-f739-11e5-9711-397188e6c516",
-  "playlist": "playlist n 1",
-  "path": "./test/m3u/files/playlist n 1.m3u",
+  "id": "5073ea90-f74b-11e5-924c-13929c71d80d",
+  "playlist": "playlist n 3",
+  "path": "./test/m3u/files/playlist n 3.m3u",
   "channels": [
     {
       "length": 0,
