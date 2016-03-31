@@ -16,8 +16,9 @@ var M3uManager = function(m3uPath){
 	const PLAYLIST_FOLDER_PATH = m3upath + '/' + 'files/';
 
 	mkdirp(PLAYLIST_FOLDER_PATH, function (err,made) {
+		
 	    if (err) throw err;
-		console.log(made);
+		
 	});
 	
 	var store = Store(m3upath);
