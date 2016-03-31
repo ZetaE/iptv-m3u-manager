@@ -5,6 +5,7 @@ var Store = require('json-fs-store');
 var debug = require('debug')('iptvplayer:m3u-manager');
 var uuid = require('node-uuid');
 var Path = require('path');
+var http = require('http');
 
 const M3U_PATH = './m3u';
 
