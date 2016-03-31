@@ -1,6 +1,6 @@
 {
   "name": "iptv-m3u-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple iptv playlist files manager.",
   "main": "index.js",
   "directories": {
