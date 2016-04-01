@@ -188,7 +188,7 @@ var M3uManager = function(m3uPath){
 			var request = http.get(url, function(response) {
 			
 				var filename;
-				var attachment = response.headers['content-disposition'];
+				var attachment = response.headers['content-disposition'] || '';
 			
 				if(attachment.indexOf('attachment; filename="') > -1){
 				

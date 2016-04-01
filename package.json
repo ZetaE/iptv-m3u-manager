@@ -4,7 +4,7 @@
   "description": "A simple iptv playlist files manager.",
   "main": "index.js",
   "scripts": {
-	
+	  
   },
   "repository": {
     "type": "git",
