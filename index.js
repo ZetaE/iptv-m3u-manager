@@ -37,13 +37,18 @@ var M3uManager = function(m3uPath){
 	
 			playlist.forEach(function(ch){
 				var rawtitle = ch.title;
-				//delete the -1 from title
-				if(rawtitle.indexOf("-1") == 0){
-					rawtitle = rawtitle.slice(3);
-					}
+				//delete the -1 from title if artist == ''
+				if(ch.artist===''){
+					if(rawtitle.indexOf("-1") == 0){
+						rawtitle = rawtitle.slice(3);
+			
+						}
+				}
+				else{
+					rawtitle = ch.artist + '-' + ch.title;
+				}
 				channel = ch;
 				channel.title = rawtitle;
-				channel.favorite = false;
 				channels.push(channel);
 			});
 	
